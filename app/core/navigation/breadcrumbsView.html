@@ -1,0 +1,8 @@
+<ol id="listView" class="breadcrumb">
+    <li ng-if="breadCrumbArray.length >= 1"><a href="#!/product/list">Home</a>
+    </li>
+    <li ng-repeat="item in breadCrumbArray track by $index">
+        <a href="javascript:" ng-if="item==BC.selectedItem"><span ng-click="BC.searchItem(item)" class="bread-item-active">{{item}}</span></a>
+        <a href="javascript:" ng-if="item!=BC.selectedItem"><span ng-click="BC.searchItem(item)">{{item}}</span></a>
+    </li>
+</ol>

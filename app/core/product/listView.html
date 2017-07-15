@@ -1,0 +1,84 @@
+<!-- Page Content -->
+<div id="listView" class="container-fluid">
+
+        <div class="row">
+            <!--<div ng-hide="false"  class="input-group col-md-12" style="padding-bottom:5px;padding-left:15px;padding-right:15px;">
+				          <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+				              <input id="search" type="search" class="form-control" placeholder="Search..." data-ng-model="search">
+			     </div>-->
+
+            <div class="col-md-12">
+                <div class="row carousel-holder">
+
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li ng-repeat="image in PLC.images.images track by $index" data-target="#carousel-example-generic" data-slide-to="{{$index+1}}"></li>
+                            </ol>
+
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image img-responsive center-block tales" src="../assets/images/b1.jpg" alt="">
+                                </div>
+                                <div class="item" ng-repeat="image in PLC.images.images">
+                                  <img class="slide-image img-responsive center-block tales" src="../assets/images/{{image.image}}" alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="panelObj" class="row" ng-repeat="panelObj in PLC.panel.panel">
+                  <div class="panel panel-success">
+                    <a data-ui-sref="{{panelObj.page}}" id="panel-heading-id">
+                      <div class="panel-heading">{{panelObj.title}}
+                        <div class="read_more">See All
+                          <span class="glyphicon glyphicon-list"></span>
+                      </div>
+                    </div>
+                    </a>
+                    <div class="panel-body">
+                      <div class="flex-container">
+                          <div class="flex-item" ng-repeat="item in panelObj.items" >
+                              <img class="img-round img-url imageUrl" src="{{item.imageUrl}}" alt="{{item.title}}" title="{{item.pdesc}}">
+                              <span>{{item.title}}<strong class="currency_in">{{item.price}}</strong></span>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+                <div class="row">
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="video in PLC.videos.videos">
+                      <video width="300" height="100%"  controls>
+                        <source src="{{video.video}}" type="video/mp4">
+                        <source src="{{video.video}}" type="video/ogg">
+                          Your browser does not support HTML5 video.
+                      </video>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="advertisement in PLC.advertisement.advertisement">
+                      <object width="100%" height="344">
+	                      <param name="movie" value="{{advertisement.ad}}"></param>
+	                      <param name="allowFullScreen" value="true"></param>
+                        <embed width="100%" src="{{advertisement.ad}}" type="application/x-shockwave-flash" allowfullscreen="true" height="100%">
+                      </embed>
+                      </object>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->

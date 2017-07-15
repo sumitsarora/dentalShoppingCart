@@ -1,0 +1,13 @@
+<div id="listView" class="fluid-container">
+<h4 class="genericText">Search result for {{DLC.searchText}} <!--<span class="badge">{{DLC.prdList.product.length}}</span>--></h4>
+<h4 ng-hide="DLC.showList" class="genericText">No Result Found</h4>
+</div>
+
+
+<div ng-show="DLC.showList" class="flex-container">
+    <div  class="flex-item" ng-repeat="item in DLC.prdList.product track by $index" ng-if="item.ptitle !='' && item.pstatus =='on'">
+      <img class="imageUrl" src="{{item.pimg}}" alt="{{item.ptitle}}" title={{item.pdesc}}>
+      <span>{{item.ptitle}}<strong class="currency_in">{{item.pprice}}</strong></span>
+            <!--<p>{{item.product}}</p>-->
+    </div>
+</div>

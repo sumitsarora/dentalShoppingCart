@@ -1,0 +1,56 @@
+{
+	"panel": [{
+		"title": "Deals",
+    "page":"root.deal",
+		"currency":"../assets/images/Indian_Rupee_symbol.png",
+		"items": [{
+				"id": "1",
+				"imageUrl": "../assets/images/deals/d1.jpg",
+				"title": "Physio Dispenser",
+        "price":"43000",
+				"description": "Powered with advanced handpiece calibration, autoclavable, 8 programs."
+			},
+			{
+				"id": "2",
+				"imageUrl": "../assets/images/deals/d2.jpg",
+				"title": "Gnatus Suction",
+        "price":"40000",
+				"description": "Very powerful for one chair. With auto drain. Provision for auto on/off."
+			},
+			{
+				"id": "3",
+				"imageUrl": "../assets/images/deals/d3.jpg",
+				"title": "Genoray iPex II",
+        "price":"43000",
+				"description": "High precision root canal measurement. Auto detects the apex accurately in any conditions dry or wet."
+			}
+		]
+	},
+  {
+    "title": "Most Selling",
+    "page":"root.selling",
+    "items": [{
+        "id": "1",
+        "imageUrl": "../assets/images/mostSelling/ms1.jpg",
+        "title": "Most Selling 1",
+        "price":"XXX",
+        "description": "feature sample most selling 1"
+      },
+      {
+        "id": "2",
+        "imageUrl": "../assets/images/mostSelling/ms2.jpg",
+        "title": "Most Selling 2",
+        "price":"XXX",
+        "description": "feature sample most selling 1"
+      },
+      {
+        "id": "3",
+        "imageUrl": "../assets/images/mostSelling/ms3.jpg",
+        "title": "Most Selling 3",
+        "price":"XXX",
+        "description": "feature sample most selling 1"
+      }
+    ]
+  }
+]
+}

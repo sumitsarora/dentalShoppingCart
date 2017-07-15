@@ -1,0 +1,53 @@
+<nav class="navbar nav navbar-inverse navbar-fixed-top navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="margin-top:.5cm;">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a id="app-title" class="navbar-brand" href="#/"><img id="dent_logo" src="../assets/images/dent_logo.png" height="60px" width="90px"/></a>
+        </div>
+
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown" ><a id="todos-list-page-link" class="dropdown-toggle" data-toggle="dropdown" data-ui-sref="root.product.list">Products <b class="caret"></b></a>
+                    <ul id="products-menu" class="dropdown-menu clearfix" role="menu">
+                      <li ng-repeat="level1 in MVC.productCat.products">
+                        <a data-toggle="collapse" data-target=".navbar-collapse" data-ui-sref="root.product.level1({level1:level1.level1})">{{level1.level1}}</a>
+                        <ul  class="dropdown-menu sub-menu">
+                          <li ng-repeat="level2 in level1.level2" ng-if="level1.level2.length >= 1">
+                            <a data-toggle="collapse" data-target=".navbar-collapse" data-ui-sref="root.product.level1.level2({level1:level1.level1,level2:level2.level})">{{level2.level}}</a>
+                              <ul class="dropdown-menu sub-menu" ng-if="level2.level3.length >= 1">
+                                 <li ng-repeat="level3 in level2.level3">
+                                   <a data-toggle="collapse" data-target=".navbar-collapse" data-ui-sref="root.product.level1.level2.level3({level1:level1.level1,level2:level2.level,level3:level3.level})">{{level3.level}}</a>
+                                    <ul  class="dropdown-menu sub-menu" ng-if="level3.level4.length >= 1">
+                                      <li ng-repeat="level4 in level3.level4">
+                                        <a  data-toggle="collapse" data-target=".navbar-collapse" data-ui-sref="root.product.level1.level2.level3.level4({level1:level1.level1,level2:level2.level,level3:level3.level,level4:level4.level})">{{level4.level}}</a>
+                                      </li>
+                                      <!--<li ng-repeat="level5 in level3.level5" ng-if="level3.level5.length >= 1">
+                                        <a data-toggle="collapse" data-target=".navbar-collapse" data-ui-sref="root.product.level({request:level5.name})">{{level5.name}}</a>
+                                      </li>-->
+                                    </ul>
+                                 </li>
+                                 <!--<li ng-repeat="level5 in level2.level5" ng-if="level2.level5.length >= 1">
+                                   <a data-toggle="collapse" data-target=".navbar-collapse" data-ui-sref="root.product.level({request:level5.name})">{{level5.name}}</a>
+                                 </li>-->
+                              </ul>
+                          </li>
+                          <!--<li ng-repeat="level5 in level1.level5" ng-if="level1.level5.length >= 1">
+                            <a data-toggle="collapse" data-target=".navbar-collapse" data-ui-sref="root.product.level({request:level5.name})">{{level5.name}}</a>
+                          </li>-->
+                        </ul>
+                      </li>
+                      <!--<li ng-repeat="level5 in level1.level5" ng-if="level1.level5.length >= 1">
+                        <a data-toggle="collapse" data-target=".navbar-collapse" data-ui-sref="root.product.level({request:level5.name})">{{level5.name}}</a>
+                      </li>-->
+                    </ul>
+                </li>
+              <li ng-repeat="option in IC.todos.menuOption"><a id="{{option.id}}" data-toggle="collapse" data-target=".navbar-collapse" data-ui-sref="{{option.page}}">{{option.option}}</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

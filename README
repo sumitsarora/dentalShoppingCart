@@ -1,0 +1,13 @@
+#step to start dentapp apps
+cd /var/www/dentapp
+pm2 start|stop|restart server.js
+
+** choose one of the option from stop,start,restart
+
+#to check server health:
+pm2 show server
+
+
+#steps to run on local machine:
+cd dentapp
+npm start

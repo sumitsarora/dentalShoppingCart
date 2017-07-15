@@ -1,0 +1,34 @@
+{
+"menuOption":[
+  {
+    "id":"1",
+   "option":"Services",
+   "page":"root.services"
+  },
+  {
+    "id":"2",
+   "option":"Dealership",
+   "page":"root.dealer"
+  },
+  {
+    "id":"3",
+   "option":"Most Selling",
+   "page":"root.selling"
+   },
+  {
+    "id":"4",
+    "option":"Today's Deals",
+    "page":"root.deal"
+  },
+  {
+    "id":"5",
+    "option":"Contact & Order",
+    "page":"root.contact"
+   },
+  {
+    "id":"6",
+    "option":"Testimonials",
+    "page":"root.testimonial"
+  }
+]
+}

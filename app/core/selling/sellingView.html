@@ -1,0 +1,11 @@
+<div id="listView" class="fluid-container">
+<h4 class="genericText">Search result <span class="badge">{{SC.deals.deals.length}}</span></h4>
+<!--<h4 ng-hide="TC.showList" class="genericText">No Result Found</h4>-->
+</div>
+<div ng-show="SC.showList" class="flex-container" >
+    <div  class="flex-item" ng-repeat="item in SC.deals.deals track by $index">
+        <img class="imageUrl" src="{{item.imageUrl}}" alt="{{item.title}}" title={{item.pdesc}}>
+        <span>{{item.title}}<strong class="currency_in">{{item.price}}</strong></span>
+            <!--<p>{{item.product}}</p>-->
+    </div>
+</div>
