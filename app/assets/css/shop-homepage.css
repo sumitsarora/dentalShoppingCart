@@ -389,13 +389,15 @@ color: blue;
   flex-basis: 30%;
   border: 1px solid #ccc;
   margin: 5px;
+  width: 80%;
+  height: 250px;
 }
 
 .flex-item img{
 display: block;
 margin: auto;
-width: 80%;
-height: 250px;
+width: auto;
+height: auto;
 }
 
 .flex-item span{
@@ -404,10 +406,11 @@ height: 250px;
   font-family: sans-serif;
   font-style: italic;
   overflow: auto;
+  margin-bottom: 0px;
 }
 
 .flex-item strong{
-padding: 3px;
+padding: 8px;
 color: red;
 float: right;
 margin: 0 40px 0 0;
